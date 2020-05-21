@@ -7,7 +7,6 @@ from .mongodb import db
 
 async def connect_db():
     """Connect to the database on startup"""
-    # FIXME: replace with relevant db connector
     logging.debug("Connecting to database client")
     db.client = AsyncIOMotorClient(DATABASE_URL,
                                    maxPoolSize=MAX_CONNECTIONS_COUNT,
